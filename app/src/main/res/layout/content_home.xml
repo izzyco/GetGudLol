@@ -9,12 +9,99 @@
     tools:showIn="@layout/app_bar_home">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/appName"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/mainSearch"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <AutoCompleteTextView
+        android:id="@+id/mainSearch"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/search_default_txt"
+        app:layout_constraintBottom_toTopOf="@+id/champImg2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+    <ImageView
+        android:id="@+id/champImg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/champImg2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/champImg2"
+        app:srcCompat="@drawable/ic_menu_camera"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <ImageView
+        android:id="@+id/champImg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/champImg3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/champImg1"
+        app:layout_constraintTop_toBottomOf="@+id/mainSearch"
+        app:srcCompat="@drawable/ic_menu_camera" />
+
+    <ImageView
+        android:id="@+id/champImg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/champImg2"
+        app:layout_constraintTop_toTopOf="@+id/champImg2"
+        app:srcCompat="@drawable/ic_menu_camera"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <TextView
+        android:id="@+id/champName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="champ1"
+        app:layout_constraintTop_toBottomOf="@+id/champImg1"
+        app:layout_constraintRight_toLeftOf="@+id/champImg1"
+        app:layout_constraintLeft_toRightOf="@+id/champImg1"
+        tools:layout_editor_absoluteX="63dp" />
+
+    <TextView
+        android:id="@+id/champName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="champ2"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/champImg2" />
+
+    <TextView
+        android:id="@+id/champName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="champ3"
+        app:layout_constraintTop_toBottomOf="@+id/champImg3"
+        app:layout_constraintRight_toLeftOf="@+id/champImg3"
+        app:layout_constraintLeft_toRightOf="@+id/champImg3"
+        tools:layout_editor_absoluteX="267dp" />
+
+
+    <!-- TODO: move constraint into ScrollView? and then add recycler view under for all champ list -->
 
 </android.support.constraint.ConstraintLayout>
